@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    background-color: rgb(75, 130, 217);
+    padding-top: 40px;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+li {
+    list-style-position: inside;
+    list-style-image: url(https://img.icons8.com/plasticine/34/cutlery.png);
+}
+
+ul {
+}
+div.container {
+    text-align: center;
+}
