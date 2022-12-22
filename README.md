@@ -21,7 +21,7 @@ _This project is meant to practice using EF Core with an ASP .NET 6 application.
 ## Setup/Installation Requirements
 
 * _Clone the repository to your desktop from: https://github.com/ChrisKLoveless/Best-Restaurants.Solution.git_
-* _Run [$ dotnet run] in the {BestRestaurants} repository in {Best-Restaurants.Solutions}_
+* _Run [$ dotnet run] in the {BestRestaurants} directory in {Best-Restaurants.Solutions}_
 
 ## Known Bugs
 
