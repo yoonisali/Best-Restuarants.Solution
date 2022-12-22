@@ -9,7 +9,7 @@ a {
     text-decoration: underline;
 }
 
-li {
+li.food {
     list-style-position: inside;
     list-style-image: url(https://img.icons8.com/plasticine/34/cutlery.png);
 }
@@ -19,3 +19,4 @@ ul {
 div.container {
     text-align: center;
 }
+

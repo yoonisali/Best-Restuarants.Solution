@@ -16,6 +16,12 @@ namespace BestRestaurants.Controllers
       _db = db;
     }
 
+    public ActionResult Index()
+    {
+      List<Review> model = _db.Reviews.Include(review => review.Restaurant).ToList();
+      return View(model);
+    }
+
     public ActionResult Create()
     {
       ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name");
@@ -25,7 +31,7 @@ namespace BestRestaurants.Controllers
     [HttpPost]
     public ActionResult Create(Review review)
     {
-      if (review.ReviewId == 0)
+      if (review.RestaurantId == 0)
       {
         return RedirectToAction("Create");
       }

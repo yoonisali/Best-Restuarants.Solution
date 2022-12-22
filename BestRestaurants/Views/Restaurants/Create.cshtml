@@ -13,14 +13,9 @@
 <p>Rate the restaurant (1-10) and Cost is ($-$$$) </p>
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)<br><br>
-    @Html.LabelFor(model => model.Rating)
-    @Html.TextBoxFor(model => model.Rating)<br><br>
-    @Html.LabelFor(model => model.Cost)
-    @Html.TextBoxFor(model => model.Cost)<br><br>
-
-
+    @Html.TextBoxFor(model => model.Name, new { placeholder = "Name", style = "text-align: center;"} )<br><br>
+    @Html.TextBoxFor(model => model.Rating, new { placeholder = "Rating", style = "text-align: center;"} )<br><br>
+    @Html.TextBoxFor(model => model.Cost, new { placeholder = "Cost", style = "text-align: center;" } )<br><br>
 
     @Html.LabelFor(model => model.Cuisine)
     @Html.DropDownList("CuisineId")<br>
