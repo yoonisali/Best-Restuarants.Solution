@@ -11,7 +11,7 @@
 
 # _{Application Name}_
 
-#### By: _**David Gamble**_
+#### By: _**Yoonis Ali**_ and _**Chris Loveless**_
 
 #### _{Brief description of application}_
 
