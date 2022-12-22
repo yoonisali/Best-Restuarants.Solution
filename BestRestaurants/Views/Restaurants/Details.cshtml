@@ -3,13 +3,30 @@
 }
 
 @model BestRestaurants.Models.Restaurant
+@using BestRestaurants.Models
 
 <h2>Restaurant Details</h2><br>
 
 <h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h5>
 <h5>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)<h5>
-<h5>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)<h5><br><br>
+<h5>@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)<h5><br>
 
-                <p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.RestaurantId })</p>
-                <p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.RestaurantId })</p>
+        @if (@Model.Reviews.Count == 0)
+        {
+            <h3>No reviews have been added to this Restaurant yet!</h3>
+        }
+        else
+        {
+            <h3>Reviews:</h3>
+            <ul>
+                @foreach (Review review in Model.Reviews)
+                {
+                    <li>@review.Description</li>
+                }
+            </ul>
+        }
+
+                <p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
+                <p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
+                <p>@Html.ActionLink("Add new Review", "Create", "Reviews")</p>
                 <p>@Html.ActionLink("Back to list", "Index")</p>
